@@ -23,8 +23,6 @@ public class ElarYardSteps {
 
     @When("User clicks on Yards tab")
     public void user_clicks_on_yards_tab() {
-        WebDriverWait wait = new WebDriverWait(driver,10);
-        wait.until(ExpectedConditions.elementToBeClickable(elarLogisticsHomePage.yardPageBtn));
         elarLogisticsHomePage.yardPageBtn.click();
     }
 
