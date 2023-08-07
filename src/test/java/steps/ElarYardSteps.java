@@ -37,11 +37,14 @@ public class ElarYardSteps {
     @When("User inputs required yard data")
     public void user_inputs_required_yard_data(DataTable datatable) {
         List<Map<String, Object>> data = datatable.asMaps(String.class, Object.class);
-        for (int i=0;i<data.size();i++){
+        for (int i = 0; i < data.size(); i++) {
             yardsProfilePage.nameInput.sendKeys(data.get(i).get("NAME").toString());
             yardsProfilePage.streetInput.sendKeys(data.get(i).get("STREET").toString());
             yardsProfilePage.cityInput.sendKeys(data.get(i).get("CITY").toString());
-           BrowserUtils.selectDropDownBySelectedValue(yardsProfilePage.stateDropDwn,"California");
+            yardsProfilePage.stateDropDwn.click();
+            BrowserUtils.selectDropDownBySelectedValue(yardsProfilePage.stateDropDwn, "California");
+            yardsProfilePage.zipCodeInput.sendKeys(data.get(i).get("ZIP CODE").toString());
+
 
         }
 
