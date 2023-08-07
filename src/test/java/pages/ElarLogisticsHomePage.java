@@ -31,7 +31,7 @@ public class ElarLogisticsHomePage {
     @FindBy(className = "link-btm-menu")
     public WebElement addCompanyBtn;
 
-    @FindBy(xpath = "//*[name()='path' and contains(@d,'M7.54444 0')]")
+    @FindBy(xpath = "//*[@id=\"app\"]/aside/nav/ul[3]/li[1]/a")
     public WebElement yardPageBtn;
 
     @FindBy(xpath = "//a[@class='link-btm-menu']")

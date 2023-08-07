@@ -32,7 +32,7 @@ public class YardsProfilePage {
     @FindBy(xpath = "//input[@id='id_city']")
     public WebElement cityInput;
 
-    @FindBy(xpath = "//select[@id='id_state']")
+    @FindBy(id = "id_state")
     public WebElement stateDropDwn;
 
     @FindBy(xpath = "//input[@id='id_zip_code']")
